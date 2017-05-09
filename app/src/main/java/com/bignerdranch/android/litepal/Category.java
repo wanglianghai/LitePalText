@@ -11,6 +11,12 @@ public class Category extends DataSupport {
     private String mCategoryName;
     private int mCategoryCode;
 
+    public Category(int id, String categoryName, int categoryCode) {
+        mId = id;
+        mCategoryName = categoryName;
+        mCategoryCode = categoryCode;
+    }
+
     public int getId() {
         return mId;
     }

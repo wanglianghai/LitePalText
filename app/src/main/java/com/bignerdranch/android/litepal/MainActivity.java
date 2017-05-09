@@ -10,6 +10,7 @@ import org.litepal.LitePal;
 
 public class MainActivity extends AppCompatActivity {
     private Button mButtonCreate;
+    private Button mButtonInsert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SQLiteDatabase db = LitePal.getDatabase();
+            }
+        });
+
+        mButtonInsert = (Button) findViewById(R.id.add_book);
+        mButtonInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Category c = new Category(1, "A", 123);
+                c.save();
             }
         });
     }
