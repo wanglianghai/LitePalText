@@ -23,6 +23,12 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:id="@+id/condition_update"
+        android:text="@string/condition_update_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
         android:id="@+id/delete_book"
         android:text="@string/delete_book"
         android:layout_width="wrap_content"
