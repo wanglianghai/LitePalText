@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">LitePal</string>
+    <string name="app_name">DatabaseTest</string>
+    <string name="create_database">create database</string>
+    <string name="add_book">add book</string>
+    <string name="update_book">update book</string>
+    <string name="delete_book">delete book</string>
+    <string name="query_book">query book</string>
 </resources>
