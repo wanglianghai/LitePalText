@@ -14,11 +14,20 @@ public class MainActivity extends AppCompatActivity {
     private Button mButtonInsert;
     private Button mButtonUpdate;
     private Button mButtonConditionUpdate;
+    private Button mButtonDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mButtonDelete = (Button) findViewById(R.id.delete_book);
+        mButtonDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DataSupport.deleteAll(Category.class, "mCategoryCode > ?" , "100");
+            }
+        });
         mButtonCreate = (Button) findViewById(R.id.create_database_button);
         mButtonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
