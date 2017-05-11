@@ -81,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
                 c.updateAll("mCategoryCode = ? ", "123");
             }
         });
+
+        Book firstBook = DataSupport.findFirst(Book.class);
+        List<Book> books = DataSupport.select("name", "author").find(Book.class);
     }
 }
+
 
